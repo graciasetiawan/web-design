@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FilmStream - Daftar Film</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css"
+    />
+    <style>
+      .movie-card {
+        transition: transform 0.3s;
+      }
+      .movie-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+      .filter-section {
+        background-color: #f8f9fa;
+        padding: 20px;
+        border-radius: 10px;
+        margin-bottom: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar (sama dengan index.html) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">FilmStream</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Beranda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="film.html">Film</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Serial TV</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="kategori.html">Kategori</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Cari film..."
+            />
+            <button class="btn btn-outline-light" type="submit">Cari</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mt-5">
+      <h1 class="mb-4">Daftar Film</h1>
+
+      <!-- Filter Section -->
+      <div class="filter-section">
+        <div class="row">
+          <div class="col-md-3 mb-3">
+            <label class="form-label">Genre</label>
+            <select class="form-select">
+              <option selected>Semua Genre</option>
+              <option>Action</option>
+              <option>Drama</option>
+              <option>Komedi</option>
+              <option>Horor</option>
+              <option>Sci-Fi</option>
+            </select>
+          </div>
+          <div class="col-md-3 mb-3">
+            <label class="form-label">Tahun</label>
+            <select class="form-select">
+              <option selected>Semua Tahun</option>
+              <option>2023</option>
+              <option>2022</option>
+              <option>2021</option>
+              <option>2020</option>
+            </select>
+          </div>
+          <div class="col-md-3 mb-3">
+            <label class="form-label">Rating</label>
+            <select class="form-select">
+              <option selected>Semua Rating</option>
+              <option>9+ (Sangat Baik)</option>
+              <option>8+ (Baik)</option>
+              <option>7+ (Cukup)</option>
+            </select>
+          </div>
+          <div class="col-md-3 mb-3 d-flex align-items-end">
+            <button class="btn btn-primary w-100">Terapkan Filter</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Film Grid -->
+      <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-4">
+        <!-- Film 1 -->
+        <div class="col">
+          <div class="card movie-card h-100">
+            <img
+              src="Assets/Oppenheimer.jpg"
+              class="card-img-top"
+              alt="Oppenheimer"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Oppenheimer</h5>
+              <span class="badge bg-warning text-dark mb-2">IMDb 8.5</span>
+              <span class="badge bg-info mb-2">Drama</span>
+              <p class="card-text">
+                Kisah tentang ilmuwan J. Robert Oppenheimer dan perannya dalam
+                pengembangan bom atom.
+              </p>
+            </div>
+            <div class="card-footer">
+              <a href="#" class="btn btn-sm btn-primary">Tonton</a>
+              <a href="#" class="btn btn-sm btn-outline-secondary">Detail</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Film 2 -->
+        <div class="col">
+          <div class="card movie-card h-100">
+            <img src="Assets/barbie.jpg" class="card-img-top" alt="Barbie" />
+            <div class="card-body">
+              <h5 class="card-title">Barbie</h5>
+              <span class="badge bg-warning text-dark mb-2">IMDb 7.0</span>
+              <span class="badge bg-success mb-2">Komedi</span>
+              <p class="card-text">
+                Barbie dikeluarkan dari Barbieland karena tidak cukup sempurna
+                dan memulai petualangan di dunia nyata.
+              </p>
+            </div>
+            <div class="card-footer">
+              <a href="#" class="btn btn-sm btn-primary">Tonton</a>
+              <a href="#" class="btn btn-sm btn-outline-secondary">Detail</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Film 3 -->
+        <div class="col">
+          <div class="card movie-card h-100">
+            <img src="Assets/JW4.jpg" class="card-img-top" alt="John Wick 4" />
+            <div class="card-body">
+              <h5 class="card-title">John Wick 4</h5>
+              <span class="badge bg-warning text-dark mb-2">IMDb 8.0</span>
+              <span class="badge bg-danger mb-2">Action</span>
+              <p class="card-text">
+                John Wick mengungkap jalan untuk mengalahkan High Table, tetapi
+                sebelum dia bisa mendapatkan kebebasannya.
+              </p>
+            </div>
+            <div class="card-footer">
+              <a href="#" class="btn btn-sm btn-primary">Tonton</a>
+              <a href="#" class="btn btn-sm btn-outline-secondary">Detail</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Film 4 -->
+        <div class="col">
+          <div class="card movie-card h-100">
+            <img
+              src="Assets/The Flash.jpg"
+              class="card-img-top"
+              alt="The Flash"
+            />
+            <div class="card-body">
+              <h5 class="card-title">The Flash</h5>
+              <span class="badge bg-warning text-dark mb-2">IMDb 6.8</span>
+              <span class="badge bg-primary mb-2">Sci-Fi</span>
+              <p class="card-text">
+                Barry Allen menggunakan kecepatan supernya untuk mengubah masa
+                lalu, tetapi masa depannya menjadi bencana.
+              </p>
+            </div>
+            <div class="card-footer">
+              <a href="#" class="btn btn-sm btn-primary">Tonton</a>
+              <a href="#" class="btn btn-sm btn-outline-secondary">Detail</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tambahkan lebih banyak film di sini -->
+      </div>
+
+      <!-- Pagination -->
+      <nav class="mt-5">
+        <ul class="pagination justify-content-center">
+          <li class="page-item disabled">
+            <a class="page-link">Sebelumnya</a>
+          </li>
+          <li class="page-item active"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#">Selanjutnya</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Footer (sama dengan index.html) -->
+    <footer class="bg-dark text-white py-4">
+      <div class="container">
+        <!-- ... isi footer yang sama ... -->
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
